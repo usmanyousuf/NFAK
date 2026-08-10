@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#100719" />
+    <title>NFAK — Qawwali Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="stage" aria-label="Qawwali music player">
+      <section class="player" aria-label="Audio player">
+        <audio id="audio" preload="metadata"></audio>
+
+        <div class="track-row">
+          <div class="track-copy">
+            <p class="eyebrow">NOW PLAYING</p>
+            <p class="track-title" id="track-title">Ali Maula Ali Maula Ali Dam Dam</p>
+          </div>
+
+          <div class="volume-control">
+            <button class="icon-button volume-button" id="mute-button" aria-label="Mute">
+              <svg class="icon volume-high" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15 9.5a4 4 0 0 1 0 5M17.8 6.7a8 8 0 0 1 0 10.6"/></svg>
+              <svg class="icon volume-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m16 10 5 5m0-5-5 5"/></svg>
+            </button>
+            <input id="volume" class="range volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume" />
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <span class="time" id="current-time">0:00</span>
+          <input id="progress" class="range progress" type="range" min="0" max="100" step="0.1" value="0" aria-label="Seek through track" />
+          <span class="time" id="duration">0:00</span>
+        </div>
+
+        <div class="controls">
+          <button class="icon-button" id="previous" aria-label="Previous track">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M18 6l-9 6 9 6V6Z"/></svg>
+          </button>
+          <button class="icon-button" id="rewind" aria-label="Rewind 10 seconds">
+            <svg class="icon skip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7H4V3"/><path d="M4.7 7A8 8 0 1 1 4 14"/><text x="12" y="15.4">10</text></svg>
+          </button>
+          <button class="play-button" id="play-pause" aria-label="Play">
+            <svg class="icon play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 9 5-9 5V7Z"/></svg>
+            <svg class="icon pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7h3v10H8zm5 0h3v10h-3z"/></svg>
+          </button>
+          <button class="icon-button" id="forward" aria-label="Skip forward 10 seconds">
+            <svg class="icon skip-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 7h4V3"/><path d="M19.3 7A8 8 0 1 0 20 14"/><text x="12" y="15.4">10</text></svg>
+          </button>
+          <button class="icon-button" id="next" aria-label="Next track">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5v14M6 6l9 6-9 6V6Z"/></svg>
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

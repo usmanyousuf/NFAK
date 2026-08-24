@@ -58,7 +58,9 @@ button, input { font: inherit; }
 .track-row, .timeline-row, .controls, .volume-control { display: flex; align-items: center; }
 .track-row { justify-content: space-between; gap: 24px; }
 .track-copy { min-width: 0; }
-.eyebrow { margin: 0 0 2px; color: var(--muted); font-size: 9px; font-weight: 600; letter-spacing: 0.16em; }
+.eyebrow { display: flex; align-items: center; gap: 8px; margin: 0 0 2px; color: var(--muted); font-size: 9px; font-weight: 600; letter-spacing: 0.16em; }
+.live-users { color: var(--accent); }
+.live-users::before { content: ""; display: inline-block; width: 5px; height: 5px; margin-right: 4px; border-radius: 50%; background: currentColor; vertical-align: 1px; }
 .track-title { overflow: hidden; margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.01em; text-overflow: ellipsis; white-space: nowrap; }
 .volume-control { gap: 5px; }
 .volume { width: 86px; }
